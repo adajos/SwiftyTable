@@ -14,7 +14,7 @@ protocol TabularData: UITableViewDataSource {
     associatedtype TableCell: UITableViewCell, ConfigurableTableCell, ReusableView
     
     //TODO: does this need the set?
-    var data: [DataItems] {get set}
+    var data: [[DataItems]] {get set}
     
     //Protocol extension completely cover the methods that return TableCell, so need a way to specify this
     //concretely
@@ -31,12 +31,12 @@ extension TabularData where Self.TableCell.Model == Self.DataItems {
     //TODO: right now this is presupposed 1 section. Need to assume our data is a list of lists
     //and calculate this from that.
     func numRowsSection(tableView: UITableView, _ section: Int) -> Int {
-        return data.count
+        return data[section].count
     }
     
     func cellAtIndexPath(tableView: UITableView, _ indexPath: NSIndexPath) -> TableCell {
         let cell = dequeueTableCell(tableView, indexPath)
-        cell.configureFromModel(data[indexPath.row])
+        cell.configureFromModel(data[indexPath.section][indexPath.row])
         return cell
     }
     

@@ -26,18 +26,13 @@ enum AppleSection : Int {
     }
 }
 
-//TODO: should this be put more in the "framework" code?
-struct Section<Item> {
-    let title: String
-    let items: [Item]
-}
 
 class FruitTableViewController: UITableViewController {
-    var data: [Apple] = [] {
+    
+    var data: [[Apple]] = [] {
         didSet {
             tableView.reloadData()
         }
-        
     }
     
     var tableCellType: AppleTableViewCell? = nil
@@ -45,14 +40,17 @@ class FruitTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = [Apple(name: "Jonathan", price: 1.50), Apple(name: "Cortland", price: 1.33), Apple(name: "Macintosh", price: 1.15)]
+        let freshSection = [Apple(name: "Jonathan", price: 1.50), Apple(name: "Cortland", price: 1.33), Apple(name: "Macintosh", price: 1.15)]
+        let oldSection = [Apple(name: "Braeburn", price: 0.99), Apple(name: "Pink Lady", price: 0.9)]
+        let rottenSection = [Apple(name: "Red Delicious", price: 0.25), Apple(name:"Granny Smith", price: 0.40)]
+        data = [freshSection, oldSection, rottenSection]
     }
     
 }
 
 extension FruitTableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return data.count
     }
 }
 
@@ -66,7 +64,7 @@ extension FruitTableViewController: TabularData {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section Header"
+        return AppleSection(rawValue: section)?.title
     }
     
 //    func dequeueTableCell(tableView: UITableView, _ indexPath: NSIndexPath) -> AppleTableViewCell {

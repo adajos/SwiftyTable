@@ -28,7 +28,6 @@ class AppleTableViewCell: UITableViewCell {
         }
     }
     
-    
     struct ViewData {
         var name: String?
         var price: Double?
