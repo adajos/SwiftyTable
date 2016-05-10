@@ -9,6 +9,8 @@
 import Foundation
 
 struct Apple {
-    var name: String = ""
-    var price: Double = 0.0
+    let name: String
+    let price: Double
+    
+
 }

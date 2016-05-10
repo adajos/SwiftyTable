@@ -28,8 +28,7 @@ protocol TabularData: UITableViewDataSource {
 
 //TODO: Need to handle row selection as well
 extension TabularData where Self.TableCell.Model == Self.DataItems {
-    //TODO: right now this is presupposed 1 section. Need to assume our data is a list of lists
-    //and calculate this from that.
+    
     func numRowsSection(tableView: UITableView, _ section: Int) -> Int {
         return data[section].count
     }
