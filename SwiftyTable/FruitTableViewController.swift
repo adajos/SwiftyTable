@@ -21,9 +21,6 @@ enum AppleSection : Int {
         }
     }
     
-    static var numberOfSections: Int {
-        return 3
-    }
 }
 
 
