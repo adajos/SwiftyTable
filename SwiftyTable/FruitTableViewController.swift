@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AppleSection : Int {
+enum AppleSection : Int, HeaderProvider {
     case Fresh
     case Old
     case Rotten
@@ -21,7 +21,10 @@ enum AppleSection : Int {
         }
     }
     
+    //TODO: expose a property of type UIView here for
+    //building completely custom headers?
 }
+
 
 
 class FruitTableViewController: UITableViewController {
@@ -33,10 +36,10 @@ class FruitTableViewController: UITableViewController {
     }
     
     var tableCellType: AppleTableViewCell? = nil
+    var headerProvider: AppleSection? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let freshSection = [Apple(name: "Jonathan", price: 1.50), Apple(name: "Cortland", price: 1.33), Apple(name: "Macintosh", price: 1.15)]
         let oldSection = [Apple(name: "Braeburn", price: 0.99), Apple(name: "Pink Lady", price: 0.9)]
@@ -60,9 +63,9 @@ extension FruitTableViewController: TabularData {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return cellAtIndexPath(tableView, indexPath)
     }
-    //TODO: can I push this down into tabular data extension by making AppleSection adopt a TableSectionTitleProviderProtocol?
+    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return AppleSection(rawValue: section)?.title
+        return titleForHeaderInSection(tableView, section)
     }
     
 //    func dequeueTableCell(tableView: UITableView, _ indexPath: NSIndexPath) -> AppleTableViewCell {

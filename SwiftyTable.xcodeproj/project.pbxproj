@@ -19,6 +19,7 @@
 		0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD951CE2512F00366FFF /* ReusableView.swift */; };
 		0325FD981CE2556B00366FFF /* TableViewAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD971CE2556B00366FFF /* TableViewAdaptor.swift */; };
 		0325FD9D1CE259D600366FFF /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD9C1CE259D600366FFF /* DoubleExtensions.swift */; };
+		03DFD4EF1CE3A3480080459E /* HeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4EE1CE3A3480080459E /* HeaderProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0325FD951CE2512F00366FFF /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		0325FD971CE2556B00366FFF /* TableViewAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdaptor.swift; sourceTree = "<group>"; };
 		0325FD9C1CE259D600366FFF /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		03DFD4EE1CE3A3480080459E /* HeaderProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				0325FD891CE2332600366FFF /* ConfigurableCell.swift */,
 				0325FD911CE233DD00366FFF /* TabularData.swift */,
 				0325FD951CE2512F00366FFF /* ReusableView.swift */,
+				03DFD4EE1CE3A3480080459E /* HeaderProvider.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */,
 				0325FD751CE2329F00366FFF /* AppDelegate.swift in Sources */,
 				0325FD981CE2556B00366FFF /* TableViewAdaptor.swift in Sources */,
+				03DFD4EF1CE3A3480080459E /* HeaderProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,13 +12,15 @@ import UIKit
 protocol TabularData: UITableViewDataSource {
     associatedtype DataItems
     associatedtype TableCell: UITableViewCell, ConfigurableTableCell, ReusableView
+    associatedtype TableHeaderProvider: HeaderProvider
     
-    //TODO: does this need the set?
-    var data: [[DataItems]] {get set}
+    var data: [[DataItems]] {get }
     
     //Protocol extension completely cover the methods that return TableCell, so need a way to specify this
     //concretely
     var tableCellType: TableCell? { get}
+    var headerProvider: TableHeaderProvider? { get}
+    
     
     func numRowsSection(tableView: UITableView, _ section: Int) -> Int
     func cellAtIndexPath(tableView: UITableView, _ indexPath: NSIndexPath) -> TableCell
@@ -45,5 +47,11 @@ extension TabularData where Self.TableCell.Model == Self.DataItems {
         }
         
         return cell
+    }
+    
+    func titleForHeaderInSection(tableView: UITableView, _ section: Int) -> String? {
+        return TableHeaderProvider(rawValue: section)?.title
+//        return TableHeaderProvider.create(section)?.title
+//        return AppleSection(rawValue: section)?.title
     }
 }
