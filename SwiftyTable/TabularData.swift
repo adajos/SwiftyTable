@@ -51,7 +51,5 @@ extension TabularData where Self.TableCell.Model == Self.DataItems {
     
     func titleForHeaderInSection(tableView: UITableView, _ section: Int) -> String? {
         return TableHeaderProvider(rawValue: section)?.title
-//        return TableHeaderProvider.create(section)?.title
-//        return AppleSection(rawValue: section)?.title
     }
 }
