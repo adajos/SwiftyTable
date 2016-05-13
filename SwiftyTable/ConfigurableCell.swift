@@ -8,6 +8,7 @@
 
 import Foundation
 
+//TODO: Should this be ConfigurableView instead?
 protocol ConfigurableTableCell {
     associatedtype Model
     func configureFromModel(model: Model)

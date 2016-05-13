@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HeaderProvider: RawRepresentable {
+protocol SectionTitleProvider: RawRepresentable {
     var title: String {get}
     init?(rawValue: Int)
 }

@@ -23,8 +23,6 @@ class AppleTableViewCell: UITableViewCell {
             else {
                 priceLabel?.text = "Unknown"
             }
-            
-            
         }
     }
     
@@ -40,4 +38,4 @@ extension AppleTableViewCell: ConfigurableTableCell {
     }
 }
 
-extension AppleTableViewCell: ReusableView {}
+

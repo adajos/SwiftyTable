@@ -8,9 +8,24 @@
 
 import Foundation
 
+enum AppleQuality : Int, SectionTitleProvider {
+    case Fresh
+    case Old
+    case Rotten
+    //    case Total
+    
+    var title: String {
+        switch self {
+        case .Fresh: return "Fresh"
+        case .Old: return "Old"
+        case .Rotten: return "Rotten"
+            //        case .Total: return "Total"
+        }
+    }
+}
+
 struct Apple {
     let name: String
     let price: Double
-    
-
+    let quality: AppleQuality
 }

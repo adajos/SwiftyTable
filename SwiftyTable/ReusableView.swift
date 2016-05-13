@@ -11,3 +11,6 @@ extension ReusableView where Self: UIView {
         return String(self)
     }
 }
+
+//Yep, all UITableViewCells get a reuseIdentifier now.
+extension UITableViewCell: ReusableView{}
