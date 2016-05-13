@@ -46,16 +46,7 @@ extension FruitTableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //TODO: Extract this code to some kind of helper class
-        let currentApple = data[indexPath.section][indexPath.row]
-        if currentApple.quality == .Rotten {
-            let cell: RottenAppleTableViewCell = tableView.dequeueAndConfigureCell(currentApple)
-            return cell
-        }
-        
-        let cell: AppleTableViewCell = tableView.dequeueAndConfigureCell(currentApple)
-        return cell
-        
+        return FruitTableCellFactory.createCell(tableView, apple: data[indexPath.section][indexPath.row])
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -65,4 +56,3 @@ extension FruitTableViewController {
     }
 
 }
-

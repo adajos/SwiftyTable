@@ -18,7 +18,8 @@
 		0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD951CE2512F00366FFF /* ReusableView.swift */; };
 		0325FD9D1CE259D600366FFF /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD9C1CE259D600366FFF /* DoubleExtensions.swift */; };
 		033C52191CE5702C00A1CA59 /* RottenAppleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C52181CE5702C00A1CA59 /* RottenAppleTableViewCell.swift */; };
-		033C521D1CE6365D00A1CA59 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C521C1CE6365D00A1CA59 /* UITableViewExtensions.swift */; };
+		033C521D1CE6365D00A1CA59 /* CellDequeueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */; };
+		033C521F1CE6493C00A1CA59 /* FruitTableCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C521E1CE6493C00A1CA59 /* FruitTableCellFactory.swift */; };
 		03DFD4EF1CE3A3480080459E /* SectionTitleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */; };
 		03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */; };
 		03DFD4F31CE4D5020080459E /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F21CE4D5020080459E /* Total.swift */; };
@@ -38,7 +39,8 @@
 		0325FD951CE2512F00366FFF /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		0325FD9C1CE259D600366FFF /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		033C52181CE5702C00A1CA59 /* RottenAppleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RottenAppleTableViewCell.swift; sourceTree = "<group>"; };
-		033C521C1CE6365D00A1CA59 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDequeueable.swift; sourceTree = "<group>"; };
+		033C521E1CE6493C00A1CA59 /* FruitTableCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitTableCellFactory.swift; sourceTree = "<group>"; };
 		03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTitleProvider.swift; sourceTree = "<group>"; };
 		03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		03DFD4F21CE4D5020080459E /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				0325FD7D1CE2329F00366FFF /* LaunchScreen.storyboard */,
 				0325FD801CE2329F00366FFF /* Info.plist */,
 				0325FD861CE232EE00366FFF /* FruitTableViewController.swift */,
+				033C521E1CE6493C00A1CA59 /* FruitTableCellFactory.swift */,
 			);
 			path = SwiftyTable;
 			sourceTree = "<group>";
@@ -91,6 +94,7 @@
 		0325FD881CE2330C00366FFF /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */,
 				0325FD891CE2332600366FFF /* ConfigurableCell.swift */,
 				0325FD951CE2512F00366FFF /* ReusableView.swift */,
 				03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */,
@@ -121,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				0325FD9C1CE259D600366FFF /* DoubleExtensions.swift */,
-				033C521C1CE6365D00A1CA59 /* UITableViewExtensions.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -201,9 +204,10 @@
 				0325FD9D1CE259D600366FFF /* DoubleExtensions.swift in Sources */,
 				0325FD8A1CE2332600366FFF /* ConfigurableCell.swift in Sources */,
 				0325FD901CE233A300366FFF /* AppleTableViewCell.swift in Sources */,
+				033C521F1CE6493C00A1CA59 /* FruitTableCellFactory.swift in Sources */,
 				0325FD871CE232EE00366FFF /* FruitTableViewController.swift in Sources */,
 				03DFD4F31CE4D5020080459E /* Total.swift in Sources */,
-				033C521D1CE6365D00A1CA59 /* UITableViewExtensions.swift in Sources */,
+				033C521D1CE6365D00A1CA59 /* CellDequeueable.swift in Sources */,
 				033C52191CE5702C00A1CA59 /* RottenAppleTableViewCell.swift in Sources */,
 				0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */,
 				03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */,
