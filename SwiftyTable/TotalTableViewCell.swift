@@ -19,13 +19,13 @@ class TotalTableViewCell: UITableViewCell {
     
     var viewData: ViewData? {
         didSet {
-            numberOfVarietiesLabel?.text = "\(viewData?.numberOfVarities)"
+            numberOfVarietiesLabel?.text = "# of Varities: \(viewData!.numberOfVarities!)"
             
             if let averagePrice = viewData?.averagePrice {
-                averagePriceLabel?.text = averagePrice.toCurrencyFormattedString()
+                averagePriceLabel?.text = "Avg price: \(averagePrice.toCurrencyFormattedString())"
             }
             else {
-                averagePriceLabel?.text = "Unknown"
+                fatalError("couldn't computer average price for some reason.")
             }
             
         }

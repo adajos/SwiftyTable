@@ -29,7 +29,7 @@ class FruitTableViewController: UITableViewController {
         let freshSection = [Apple(name: "Jonathan", price: 1.50, quality: .Fresh), Apple(name: "Cortland", price: 1.33, quality: .Fresh), Apple(name: "Macintosh", price: 1.15, quality: .Fresh)]
         let oldSection = [Apple(name: "Braeburn", price: 0.99, quality: .Old), Apple(name: "Pink Lady", price: 0.9, quality: .Old)]
         let rottenSection = [Apple(name: "Red Delicious", price: 0.25, quality: .Rotten), Apple(name:"Granny Smith", price: 0.40, quality: .Rotten)]
-//        let totalSection = [Total.create(freshSection + oldSection + rottenSection)]
+
         data = [freshSection, oldSection, rottenSection]
     }
     
@@ -38,21 +38,31 @@ class FruitTableViewController: UITableViewController {
 //MARK: UITableViewDataSource stuff
 extension FruitTableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return data.count
+        return data.count + 1 //gotta show a total row.
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].count
+        return section < data.count ? data[section].count : 1 //account for total row
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return FruitTableCellFactory.createCell(tableView, apple: data[indexPath.section][indexPath.row])
+        //TODO: make the func signature take a cellDequeues, [[Apple]] and a section, 
+        //then have this conditional inside the factory for testing. Or does that even make sense, 
+        //since we have to do some gyrations in the tableviewcontroller to know the number of rows anyway?
+        if indexPath.section < data.count {
+            return FruitTableCellFactory.createCell(tableView, apple: data[indexPath.section][indexPath.row])
+        }
+        return FruitTableCellFactory.createCell(tableView, allApples: self.data)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //TODO: Since this is trivial to provide directly, do I even need the SectionTitleProvider
         //abstraction?
-        return AppleQuality(rawValue: section)?.title
+        if section < data.count {
+            return AppleQuality(rawValue: section)?.title
+        }
+        //"Total" is a UI concern and shouldn't clutter up the AppleQuality enum on the model.
+        return "Total"
     }
 
 }

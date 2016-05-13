@@ -96,6 +96,47 @@
                                     <outlet property="mainLabel" destination="GYd-oG-kre" id="ceA-MT-hIz"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalTableViewCell" id="ipf-FJ-qKS" userLabel="TotalTableViewCell" customClass="TotalTableViewCell" customModule="SwiftyTable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipf-FJ-qKS" id="o5M-ow-Lt2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4i-Js-qHl">
+                                            <rect key="frame" x="18" y="11" width="154" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="154" id="4QL-oF-fnM"/>
+                                                <constraint firstAttribute="height" constant="21" id="dhK-7F-Fvv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca4-Aw-pCX">
+                                            <rect key="frame" x="403" y="11" width="120" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="FCE-bw-vAW"/>
+                                                <constraint firstAttribute="width" constant="120" id="hks-yV-GW0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Z4i-Js-qHl" firstAttribute="leading" secondItem="o5M-ow-Lt2" secondAttribute="leadingMargin" constant="10" id="U8S-dI-EPY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ca4-Aw-pCX" secondAttribute="trailing" constant="69" id="YBn-cG-fJP"/>
+                                        <constraint firstItem="Ca4-Aw-pCX" firstAttribute="centerY" secondItem="o5M-ow-Lt2" secondAttribute="centerY" id="Zul-fn-tRp"/>
+                                        <constraint firstItem="Z4i-Js-qHl" firstAttribute="centerY" secondItem="o5M-ow-Lt2" secondAttribute="centerY" id="mtt-mn-rTK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.45882352939999999" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="averagePriceLabel" destination="Ca4-Aw-pCX" id="ssJ-L4-GgU"/>
+                                    <outlet property="numberOfVarietiesLabel" destination="Z4i-Js-qHl" id="8lv-nu-Zsn"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="cQh-Ku-vH6" id="M7x-O5-CMy"/>

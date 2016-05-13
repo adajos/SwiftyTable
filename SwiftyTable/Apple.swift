@@ -14,7 +14,6 @@ enum AppleQuality : Int, SectionTitleProvider {
     case Rotten
     //    case Total
     
-    //TODO: add title property via an extension in our UITableViewController?
     var title: String {
         switch self {
         case .Fresh: return "Fresh"

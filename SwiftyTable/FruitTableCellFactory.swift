@@ -24,6 +24,10 @@ struct FruitTableCellFactory {
         return cell
     }
     
-    //TODO: prove this whole thing out by overloading createCell to handle a Total model object.
+    static func createCell(cellDequeuer: CellDequeueable, allApples: [[Apple]]) -> UITableViewCell {
+        let total = Total.create(allApples.flatMap { $0 })
+        let cell: TotalTableViewCell = cellDequeuer.dequeueAndConfigureCell(total)
+        return cell
+    }
 }
 
