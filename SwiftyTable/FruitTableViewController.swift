@@ -38,7 +38,7 @@ class FruitTableViewController: UITableViewController {
 //MARK: UITableViewDataSource stuff
 extension FruitTableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return data.count + 1 //gotta show a total row.
+        return data.count + 1 //gotta show a total row. The business demands it!
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CellDequeueable {
-    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
+    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableView, T: ReusableView, U == T.Model>
         (model: U) -> T
 }
 
@@ -21,7 +21,7 @@ extension UITableView: CellDequeueable {}
 extension CellDequeueable where Self: UITableView {
     //Interesting that I need to spell this out that even though all UITableViewCells adopt ReusableView. Makes sense
     //from the perspective that this could be getting invoked from some other module which doesn't have that extension.
-    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
+    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableView, T: ReusableView, U == T.Model>
         (model: U) -> T {
         
         //every UITableViewCell has been extended to conform to ReusableView protocol
@@ -40,7 +40,7 @@ extension CellDequeueable where Self: UITableView {
 }
 
 //extension UITableView {
-//    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
+//    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableView, T: ReusableView, U == T.Model>
 //        (model: U) -> T {
 //        
 //        //every UITableViewCell has been extended to conform to ReusableView protocol

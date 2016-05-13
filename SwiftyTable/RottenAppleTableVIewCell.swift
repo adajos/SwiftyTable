@@ -23,7 +23,7 @@ class RottenAppleTableViewCell: UITableViewCell {
     
 }
 
-extension RottenAppleTableViewCell: ConfigurableTableCell {
+extension RottenAppleTableViewCell: ConfigurableView {
     func configureFromModel(model: Apple) {
         self.viewData = ViewData(name: model.name)
     }

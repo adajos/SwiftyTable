@@ -32,7 +32,7 @@ class TotalTableViewCell: UITableViewCell {
     }
 }
 
-extension TotalTableViewCell: ConfigurableTableCell {
+extension TotalTableViewCell: ConfigurableView {
     func configureFromModel(model: Total) {
         self.viewData = ViewData(numberOfVarities: model.numberOfVarieties, averagePrice: model.averagePrice)
     }

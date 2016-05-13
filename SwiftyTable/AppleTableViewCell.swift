@@ -32,7 +32,7 @@ class AppleTableViewCell: UITableViewCell {
     }
 }
 
-extension AppleTableViewCell: ConfigurableTableCell {
+extension AppleTableViewCell: ConfigurableView {
     func configureFromModel(model: Apple) {
         self.viewData = ViewData(name: model.name, price: model.price)
     }

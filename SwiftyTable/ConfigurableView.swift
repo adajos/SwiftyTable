@@ -8,8 +8,7 @@
 
 import Foundation
 
-//TODO: Should this be ConfigurableView instead?
-protocol ConfigurableTableCell {
+protocol ConfigurableView {
     associatedtype Model
     func configureFromModel(model: Model)
 }

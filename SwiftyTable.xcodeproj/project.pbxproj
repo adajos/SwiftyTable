@@ -12,7 +12,7 @@
 		0325FD7C1CE2329F00366FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0325FD7B1CE2329F00366FFF /* Assets.xcassets */; };
 		0325FD7F1CE2329F00366FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0325FD7D1CE2329F00366FFF /* LaunchScreen.storyboard */; };
 		0325FD871CE232EE00366FFF /* FruitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD861CE232EE00366FFF /* FruitTableViewController.swift */; };
-		0325FD8A1CE2332600366FFF /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD891CE2332600366FFF /* ConfigurableCell.swift */; };
+		0325FD8A1CE2332600366FFF /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD891CE2332600366FFF /* ConfigurableView.swift */; };
 		0325FD8E1CE2338100366FFF /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD8D1CE2338100366FFF /* Apple.swift */; };
 		0325FD901CE233A300366FFF /* AppleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD8F1CE233A300366FFF /* AppleTableViewCell.swift */; };
 		0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD951CE2512F00366FFF /* ReusableView.swift */; };
@@ -33,7 +33,7 @@
 		0325FD7E1CE2329F00366FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0325FD801CE2329F00366FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0325FD861CE232EE00366FFF /* FruitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitTableViewController.swift; sourceTree = "<group>"; };
-		0325FD891CE2332600366FFF /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		0325FD891CE2332600366FFF /* ConfigurableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		0325FD8D1CE2338100366FFF /* Apple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		0325FD8F1CE233A300366FFF /* AppleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleTableViewCell.swift; sourceTree = "<group>"; };
 		0325FD951CE2512F00366FFF /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */,
-				0325FD891CE2332600366FFF /* ConfigurableCell.swift */,
+				0325FD891CE2332600366FFF /* ConfigurableView.swift */,
 				0325FD951CE2512F00366FFF /* ReusableView.swift */,
 				03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */,
 			);
@@ -202,7 +202,7 @@
 			files = (
 				0325FD8E1CE2338100366FFF /* Apple.swift in Sources */,
 				0325FD9D1CE259D600366FFF /* DoubleExtensions.swift in Sources */,
-				0325FD8A1CE2332600366FFF /* ConfigurableCell.swift in Sources */,
+				0325FD8A1CE2332600366FFF /* ConfigurableView.swift in Sources */,
 				0325FD901CE233A300366FFF /* AppleTableViewCell.swift in Sources */,
 				033C521F1CE6493C00A1CA59 /* FruitTableCellFactory.swift in Sources */,
 				0325FD871CE232EE00366FFF /* FruitTableViewController.swift in Sources */,
