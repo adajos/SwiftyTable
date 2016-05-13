@@ -49,11 +49,11 @@ extension FruitTableViewController {
         //TODO: Extract this code to some kind of helper class
         let currentApple = data[indexPath.section][indexPath.row]
         if currentApple.quality == .Rotten {
-            let cell: RottenAppleTableViewCell = tableView.dequeueAndConfigureCell(RottenAppleTableViewCell.self, model: currentApple)
+            let cell: RottenAppleTableViewCell = tableView.dequeueAndConfigureCell(currentApple)
             return cell
         }
         
-        let cell: AppleTableViewCell = tableView.dequeueAndConfigureCell(AppleTableViewCell.self, model: currentApple)
+        let cell: AppleTableViewCell = tableView.dequeueAndConfigureCell(currentApple)
         return cell
         
     }
