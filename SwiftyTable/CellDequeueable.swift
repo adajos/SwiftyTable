@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CellDequeueable {
-    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, U == T.Model>
+    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
         (model: U) -> T
 }
 
@@ -19,14 +19,14 @@ protocol CellDequeueable {
 extension UITableView: CellDequeueable {}
 
 extension CellDequeueable where Self: UITableView {
-    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, U == T.Model>
+    //Interesting that I need to spell this out that even though all UITableViewCells adopt ReusableView. Makes sense
+    //from the perspective that this could be getting invoked from some other module which doesn't have that extension.
+    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
         (model: U) -> T {
         
         //every UITableViewCell has been extended to conform to ReusableView protocol
         //which has this static reuseIdentifier computed property on it.
-        //Why I need to do this cast is beyond me, T.reuseIdentifier or T.Type.reuseIdentifier seems
-        //like it should work, but it doesn't.
-        let reuseIdentifier = (T.self as UITableViewCell.Type).reuseIdentifier
+        let reuseIdentifier = T.reuseIdentifier
         print("reuseIdentifier is \(reuseIdentifier)")
         let retVal = self.dequeueReusableCellWithIdentifier(reuseIdentifier) as? T
         
@@ -40,21 +40,19 @@ extension CellDequeueable where Self: UITableView {
 }
 
 //extension UITableView {
-//    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, U == T.Model>
+//    func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableTableCell, T: ReusableView, U == T.Model>
 //        (model: U) -> T {
-//
+//        
 //        //every UITableViewCell has been extended to conform to ReusableView protocol
 //        //which has this static reuseIdentifier computed property on it.
-//        //Why I need to do this cast is beyond me, T.reuseIdentifier or T.Type.reuseIdentifier seems
-//        //like it should work, but it doesn't.
-//        let reuseIdentifier = (T.self as UITableViewCell.Type).reuseIdentifier
+//        let reuseIdentifier = T.reuseIdentifier
 //        print("reuseIdentifier is \(reuseIdentifier)")
 //        let retVal = self.dequeueReusableCellWithIdentifier(reuseIdentifier) as? T
 //        
 //        guard let val = retVal else {
 //            fatalError("couldn't dequeue cell with reuseIdentifier: \(reuseIdentifier)")
 //        }
-//
+//        
 //        val.configureFromModel(model)
 //        return val
 //    }

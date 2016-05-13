@@ -4,7 +4,8 @@
 import Foundation
 import UIKit
 
-protocol ReusableView: class {}
+//TODO: Do I need to put the class requirement back in there?
+protocol ReusableView {}//: class {}
 
 extension ReusableView where Self: UIView {
     static var reuseIdentifier: String {
