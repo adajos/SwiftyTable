@@ -11,7 +11,7 @@
 		0325FD7A1CE2329F00366FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0325FD781CE2329F00366FFF /* Main.storyboard */; };
 		0325FD7C1CE2329F00366FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0325FD7B1CE2329F00366FFF /* Assets.xcassets */; };
 		0325FD7F1CE2329F00366FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0325FD7D1CE2329F00366FFF /* LaunchScreen.storyboard */; };
-		0325FD871CE232EE00366FFF /* FruitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD861CE232EE00366FFF /* FruitTableViewController.swift */; };
+		0325FD871CE232EE00366FFF /* FruitMultiCellTypeMultiSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD861CE232EE00366FFF /* FruitMultiCellTypeMultiSectionTableViewController.swift */; };
 		0325FD8A1CE2332600366FFF /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD891CE2332600366FFF /* ConfigurableView.swift */; };
 		0325FD8E1CE2338100366FFF /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD8D1CE2338100366FFF /* Apple.swift */; };
 		0325FD901CE233A300366FFF /* AppleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0325FD8F1CE233A300366FFF /* AppleTableViewCell.swift */; };
@@ -22,7 +22,10 @@
 		03712A511CEB556400E50318 /* CellDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A501CEB556400E50318 /* CellDisplayable.swift */; };
 		03712A531CEB55F400E50318 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A521CEB55F400E50318 /* ModelExtensions.swift */; };
 		03712A551CEB94A700E50318 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A541CEB94A700E50318 /* Section.swift */; };
-		03712A571CEB9A4500E50318 /* UITableViewControllersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */; };
+		03712A571CEB9A4500E50318 /* UITableViewDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A561CEB9A4500E50318 /* UITableViewDataSources.swift */; };
+		03712A591CEBA01900E50318 /* FruitSingleCellMultiSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A581CEBA01900E50318 /* FruitSingleCellMultiSectionTableViewController.swift */; };
+		03712A5B1CEBA1C400E50318 /* FruitMultiCellSingleSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A5A1CEBA1C400E50318 /* FruitMultiCellSingleSectionTableViewController.swift */; };
+		03712A5D1CEBA29200E50318 /* FruitSingleCellSingleSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A5C1CEBA29200E50318 /* FruitSingleCellSingleSectionTableViewController.swift */; };
 		03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */; };
 		03DFD4F31CE4D5020080459E /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F21CE4D5020080459E /* Total.swift */; };
 /* End PBXBuildFile section */
@@ -34,7 +37,7 @@
 		0325FD7B1CE2329F00366FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0325FD7E1CE2329F00366FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0325FD801CE2329F00366FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0325FD861CE232EE00366FFF /* FruitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitTableViewController.swift; sourceTree = "<group>"; };
+		0325FD861CE232EE00366FFF /* FruitMultiCellTypeMultiSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitMultiCellTypeMultiSectionTableViewController.swift; sourceTree = "<group>"; };
 		0325FD891CE2332600366FFF /* ConfigurableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		0325FD8D1CE2338100366FFF /* Apple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		0325FD8F1CE233A300366FFF /* AppleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleTableViewCell.swift; sourceTree = "<group>"; };
@@ -45,7 +48,10 @@
 		03712A501CEB556400E50318 /* CellDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDisplayable.swift; sourceTree = "<group>"; };
 		03712A521CEB55F400E50318 /* ModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 		03712A541CEB94A700E50318 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewControllersProtocols.swift; sourceTree = "<group>"; };
+		03712A561CEB9A4500E50318 /* UITableViewDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewDataSources.swift; sourceTree = "<group>"; };
+		03712A581CEBA01900E50318 /* FruitSingleCellMultiSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitSingleCellMultiSectionTableViewController.swift; sourceTree = "<group>"; };
+		03712A5A1CEBA1C400E50318 /* FruitMultiCellSingleSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitMultiCellSingleSectionTableViewController.swift; sourceTree = "<group>"; };
+		03712A5C1CEBA29200E50318 /* FruitSingleCellSingleSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitSingleCellSingleSectionTableViewController.swift; sourceTree = "<group>"; };
 		03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		03DFD4F21CE4D5020080459E /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,29 +89,32 @@
 				0325FD991CE2599300366FFF /* extensions */,
 				0325FD8C1CE2336E00366FFF /* model */,
 				0325FD8B1CE2336200366FFF /* cells */,
-				0325FD881CE2330C00366FFF /* protocols */,
+				0325FD881CE2330C00366FFF /* framework */,
 				0325FD741CE2329F00366FFF /* AppDelegate.swift */,
 				0325FD781CE2329F00366FFF /* Main.storyboard */,
 				0325FD7B1CE2329F00366FFF /* Assets.xcassets */,
 				0325FD7D1CE2329F00366FFF /* LaunchScreen.storyboard */,
 				0325FD801CE2329F00366FFF /* Info.plist */,
-				0325FD861CE232EE00366FFF /* FruitTableViewController.swift */,
 				03712A521CEB55F400E50318 /* ModelExtensions.swift */,
-				03712A541CEB94A700E50318 /* Section.swift */,
+				0325FD861CE232EE00366FFF /* FruitMultiCellTypeMultiSectionTableViewController.swift */,
+				03712A581CEBA01900E50318 /* FruitSingleCellMultiSectionTableViewController.swift */,
+				03712A5A1CEBA1C400E50318 /* FruitMultiCellSingleSectionTableViewController.swift */,
+				03712A5C1CEBA29200E50318 /* FruitSingleCellSingleSectionTableViewController.swift */,
 			);
 			path = SwiftyTable;
 			sourceTree = "<group>";
 		};
-		0325FD881CE2330C00366FFF /* protocols */ = {
+		0325FD881CE2330C00366FFF /* framework */ = {
 			isa = PBXGroup;
 			children = (
 				033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */,
+				03712A501CEB556400E50318 /* CellDisplayable.swift */,
 				0325FD891CE2332600366FFF /* ConfigurableView.swift */,
 				0325FD951CE2512F00366FFF /* ReusableView.swift */,
-				03712A501CEB556400E50318 /* CellDisplayable.swift */,
-				03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */,
+				03712A541CEB94A700E50318 /* Section.swift */,
+				03712A561CEB9A4500E50318 /* UITableViewDataSources.swift */,
 			);
-			name = protocols;
+			name = framework;
 			sourceTree = "<group>";
 		};
 		0325FD8B1CE2336200366FFF /* cells */ = {
@@ -206,20 +215,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03712A5D1CEBA29200E50318 /* FruitSingleCellSingleSectionTableViewController.swift in Sources */,
 				03712A551CEB94A700E50318 /* Section.swift in Sources */,
 				03712A511CEB556400E50318 /* CellDisplayable.swift in Sources */,
+				03712A591CEBA01900E50318 /* FruitSingleCellMultiSectionTableViewController.swift in Sources */,
 				03712A531CEB55F400E50318 /* ModelExtensions.swift in Sources */,
 				0325FD8E1CE2338100366FFF /* Apple.swift in Sources */,
 				0325FD9D1CE259D600366FFF /* DoubleExtensions.swift in Sources */,
 				0325FD8A1CE2332600366FFF /* ConfigurableView.swift in Sources */,
 				0325FD901CE233A300366FFF /* AppleTableViewCell.swift in Sources */,
-				0325FD871CE232EE00366FFF /* FruitTableViewController.swift in Sources */,
+				0325FD871CE232EE00366FFF /* FruitMultiCellTypeMultiSectionTableViewController.swift in Sources */,
 				03DFD4F31CE4D5020080459E /* Total.swift in Sources */,
 				033C521D1CE6365D00A1CA59 /* CellDequeueable.swift in Sources */,
 				033C52191CE5702C00A1CA59 /* RottenAppleTableViewCell.swift in Sources */,
 				0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */,
+				03712A5B1CEBA1C400E50318 /* FruitMultiCellSingleSectionTableViewController.swift in Sources */,
 				03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */,
-				03712A571CEB9A4500E50318 /* UITableViewControllersProtocols.swift in Sources */,
+				03712A571CEB9A4500E50318 /* UITableViewDataSources.swift in Sources */,
 				0325FD751CE2329F00366FFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

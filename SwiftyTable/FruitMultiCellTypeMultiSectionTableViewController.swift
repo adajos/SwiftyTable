@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class FruitTableViewController: UITableViewController, MultiCellMultiSectionTableDataSource {
+class FruitMultiCellTypeMultiSectionTableViewController: UITableViewController, MultiCellMultiSectionTableDataSource {
     //Only need to mess around with an Array of CellDisplayables if we have multiple kinds of cells that we will use
     //in this table. Otherwise can just use the generic AnySection<T> with concrete model object.
     var items: [Section] = [] {
@@ -39,7 +39,7 @@ class FruitTableViewController: UITableViewController, MultiCellMultiSectionTabl
 }
 
 //MARK: UITableViewDataSource stuff
-extension FruitTableViewController {
+extension FruitMultiCellTypeMultiSectionTableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return items.count
     }

@@ -6,8 +6,6 @@
 //  Copyright © 2016 adams. All rights reserved.
 //
 
-//TOOD: this would be a "framework" class.
-
 struct Section {
     let title: String
     let list: [CellDisplayable]
