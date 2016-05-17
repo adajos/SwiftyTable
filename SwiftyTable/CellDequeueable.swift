@@ -21,6 +21,8 @@ extension UITableView: CellDequeueable {}
 extension CellDequeueable where Self: UITableView {
     //Interesting that I need to spell this out that even though all UITableViewCells adopt ReusableView. Makes sense
     //from the perspective that this could be getting invoked from some other module which doesn't have that extension.
+    //UPDATE: Actually that theory isn't correct, making ConfigurableView + extension public doesn't seem to
+    //make a difference.
     func dequeueAndConfigureCell<T: UITableViewCell, U where T: ConfigurableView, T: ReusableView, U == T.Model>
         (model: U) -> T {
         
