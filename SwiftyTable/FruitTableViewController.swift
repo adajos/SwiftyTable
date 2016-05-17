@@ -10,10 +10,10 @@ import UIKit
 
 
 
-class FruitTableViewController: UITableViewController {
+class FruitTableViewController: UITableViewController, MultiCellMultiSectionTableDataSource {
     //Only need to mess around with an Array of CellDisplayables if we have multiple kinds of cells that we will use
-    //in this table. Otherwise can just use the concrete model object.
-    var items: [[CellDisplayable]] = [] {
+    //in this table. Otherwise can just use the generic AnySection<T> with concrete model object.
+    var items: [Section] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -32,8 +32,8 @@ class FruitTableViewController: UITableViewController {
         
         let applesArray: [Apple] = (freshSection + oldSection + rottenSection).flatMap {$0 as? Apple}
         let theTotal = Total.create(applesArray)
-
-        items = [freshSection, oldSection, rottenSection, [theTotal]]
+        
+        items = [Section(title: AppleQuality.Fresh.title, list: freshSection), Section(title:  AppleQuality.Old.title, list: oldSection), Section(title:  AppleQuality.Rotten.title, list: rottenSection), Section(list: [theTotal])]
     }
     
 }
@@ -45,17 +45,19 @@ extension FruitTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items[section].count
+        return items[section].list.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       return items[indexPath.section][indexPath.row].getCell(tableView)
+       return items[indexPath.section].list[indexPath.row].getCell(tableView)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return AppleSectionTitleProvider(rawValue: section)?.title
+        return items[section].title
     }
 
 }
+
+
 
 

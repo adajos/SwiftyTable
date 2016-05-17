@@ -12,8 +12,7 @@ extension Double {
     func toCurrencyFormattedString() -> String {
         let numFormatter = NSNumberFormatter()
         numFormatter.numberStyle = .CurrencyStyle
-        numFormatter.usesSignificantDigits = false
-        numFormatter.minimumSignificantDigits = 3
+        numFormatter.minimumFractionDigits = 2
         numFormatter.maximumFractionDigits = 2
         return numFormatter.stringFromNumber(self) ?? numFormatter.stringFromNumber(0)!
     }

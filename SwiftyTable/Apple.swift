@@ -8,18 +8,16 @@
 
 import Foundation
 
-enum AppleQuality : Int, SectionTitleProvider {
+enum AppleQuality : Int {
     case Fresh
     case Old
     case Rotten
-    //    case Total
     
     var title: String {
         switch self {
         case .Fresh: return "Fresh"
         case .Old: return "Old"
         case .Rotten: return "Rotten"
-            //        case .Total: return "Total"
         }
     }
 }

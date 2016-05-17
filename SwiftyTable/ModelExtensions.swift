@@ -26,27 +26,3 @@ extension Total: CellDisplayable {
         return cell
     }
 }
-
-enum AppleSectionTitleProvider: Int, SectionTitleProvider {
-    case Fresh
-    case Old
-    case Rotten
-    case Total
-    
-    var title: String {
-        switch self {
-        case .Fresh: return AppleQuality.Fresh.title
-        case .Old: return AppleQuality.Old.title
-        case .Rotten: return AppleQuality.Rotten.title
-        case .Total: return "Total"
-        }
-    }
-}
-
-
-
-
-
-
-
-

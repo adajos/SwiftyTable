@@ -21,7 +21,8 @@
 		033C521D1CE6365D00A1CA59 /* CellDequeueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */; };
 		03712A511CEB556400E50318 /* CellDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A501CEB556400E50318 /* CellDisplayable.swift */; };
 		03712A531CEB55F400E50318 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A521CEB55F400E50318 /* ModelExtensions.swift */; };
-		03DFD4EF1CE3A3480080459E /* SectionTitleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */; };
+		03712A551CEB94A700E50318 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A541CEB94A700E50318 /* Section.swift */; };
+		03712A571CEB9A4500E50318 /* UITableViewControllersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */; };
 		03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */; };
 		03DFD4F31CE4D5020080459E /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFD4F21CE4D5020080459E /* Total.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +44,8 @@
 		033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDequeueable.swift; sourceTree = "<group>"; };
 		03712A501CEB556400E50318 /* CellDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDisplayable.swift; sourceTree = "<group>"; };
 		03712A521CEB55F400E50318 /* ModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
-		03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTitleProvider.swift; sourceTree = "<group>"; };
+		03712A541CEB94A700E50318 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewControllersProtocols.swift; sourceTree = "<group>"; };
 		03DFD4F01CE4D4E20080459E /* TotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		03DFD4F21CE4D5020080459E /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				0325FD801CE2329F00366FFF /* Info.plist */,
 				0325FD861CE232EE00366FFF /* FruitTableViewController.swift */,
 				03712A521CEB55F400E50318 /* ModelExtensions.swift */,
+				03712A541CEB94A700E50318 /* Section.swift */,
 			);
 			path = SwiftyTable;
 			sourceTree = "<group>";
@@ -99,8 +102,8 @@
 				033C521C1CE6365D00A1CA59 /* CellDequeueable.swift */,
 				0325FD891CE2332600366FFF /* ConfigurableView.swift */,
 				0325FD951CE2512F00366FFF /* ReusableView.swift */,
-				03DFD4EE1CE3A3480080459E /* SectionTitleProvider.swift */,
 				03712A501CEB556400E50318 /* CellDisplayable.swift */,
+				03712A561CEB9A4500E50318 /* UITableViewControllersProtocols.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03712A551CEB94A700E50318 /* Section.swift in Sources */,
 				03712A511CEB556400E50318 /* CellDisplayable.swift in Sources */,
 				03712A531CEB55F400E50318 /* ModelExtensions.swift in Sources */,
 				0325FD8E1CE2338100366FFF /* Apple.swift in Sources */,
@@ -215,8 +219,8 @@
 				033C52191CE5702C00A1CA59 /* RottenAppleTableViewCell.swift in Sources */,
 				0325FD961CE2512F00366FFF /* ReusableView.swift in Sources */,
 				03DFD4F11CE4D4E20080459E /* TotalTableViewCell.swift in Sources */,
+				03712A571CEB9A4500E50318 /* UITableViewControllersProtocols.swift in Sources */,
 				0325FD751CE2329F00366FFF /* AppDelegate.swift in Sources */,
-				03DFD4EF1CE3A3480080459E /* SectionTitleProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

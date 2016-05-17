@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Fruit Table View Controller-->
+        <!--MultiCellMultiSection-->
         <scene sceneID="vwL-sh-tGz">
             <objects>
-                <tableViewController id="cQh-Ku-vH6" customClass="FruitTableViewController" customModule="SwiftyTable" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="MultiCellMultiSection" id="cQh-Ku-vH6" customClass="FruitTableViewController" customModule="SwiftyTable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BF7-tV-PI4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipf-FJ-qKS" id="o5M-ow-Lt2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4i-Js-qHl">
@@ -114,10 +114,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca4-Aw-pCX">
-                                            <rect key="frame" x="403" y="11" width="120" height="21"/>
+                                            <rect key="frame" x="283" y="11" width="240" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="FCE-bw-vAW"/>
-                                                <constraint firstAttribute="width" constant="120" id="hks-yV-GW0"/>
+                                                <constraint firstAttribute="width" constant="240" id="hks-yV-GW0"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
