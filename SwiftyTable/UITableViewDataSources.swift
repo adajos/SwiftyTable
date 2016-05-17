@@ -8,21 +8,21 @@
 
 import UIKit
 
-protocol SingleCellSingleSectionTableDataSource: UITableViewDataSource {
+public protocol SingleCellSingleSectionTableDataSource: UITableViewDataSource {
     associatedtype ModelObject
     var items: [ModelObject] { get }
 }
 
-protocol SingleCellMultiSectionTableDataSource: UITableViewDataSource {
+public protocol SingleCellMultiSectionTableDataSource: UITableViewDataSource {
     associatedtype ModelObject
     var items:[AnySection<ModelObject>] { get }
 }
 
-protocol MultiCellSingleSectionTableDataSource: UITableViewDataSource {
+public protocol MultiCellSingleSectionTableDataSource: UITableViewDataSource {
     var items: [CellDisplayable] { get }
 }
 
-protocol MultiCellMultiSectionTableDataSource: UITableViewDataSource {
+public protocol MultiCellMultiSectionTableDataSource: UITableViewDataSource {
     var items: [Section] { get}
 }
 

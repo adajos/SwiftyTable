@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol CellDisplayable {
+public protocol CellDisplayable {
     func getCell(cellDequeuer: CellDequeueable) -> UITableViewCell
 }

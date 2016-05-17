@@ -6,7 +6,7 @@
 //  Copyright © 2016 adams. All rights reserved.
 //
 
-struct Section {
+public struct Section {
     let title: String
     let list: [CellDisplayable]
     
@@ -16,7 +16,7 @@ struct Section {
     }
 }
 
-struct AnySection<T> {
+public struct AnySection<T> {
     let title: String
     let list: [T]
     

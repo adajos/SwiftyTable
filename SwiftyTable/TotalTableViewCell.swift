@@ -19,7 +19,7 @@ class TotalTableViewCell: UITableViewCell {
     
     var viewData: ViewData? {
         didSet {
-            numberOfVarietiesLabel?.text = "# of Varities: \(viewData!.numberOfVarities!)"
+            numberOfVarietiesLabel?.text = "# of Varieties: \(viewData!.numberOfVarities!)"
             
             if let averagePrice = viewData?.averagePrice {
                 averagePriceLabel?.text = "Avg price: \(averagePrice.toCurrencyFormattedString())"
